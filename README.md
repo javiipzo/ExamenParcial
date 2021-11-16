@@ -60,6 +60,7 @@ El cliente es una compañía de coches y nos pide que le realicemos informes sob
 3)	Porcentaje de usuarios recurrentes sobre el total de usuarios (ISSUES)
 
 4)	Coche más visitado. ¿Es el que más convierte? (ISSUES)
+
 FICHEROS QUE TENEMOS EN NUESTRO GITHUB (ACTUALMENTE)
 Datos
 Tenemos dos tipos de ficheros:
