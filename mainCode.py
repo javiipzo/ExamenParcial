@@ -1,5 +1,5 @@
-import re
 import pandas as pd
 
-def leerdatos():
-    None
+def leerdatos(archivo):
+    df=pd.read_csv(archivo)
+
