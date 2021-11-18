@@ -3,7 +3,7 @@ from pandas.core.frame import DataFrame
 
 def leerdatos(archivo ):
     df=pd.read_csv(archivo)
-    df
+    print(df)
 
 def getvalue(archivo,fila,dato):
     df=pd.read_csv(archivo)
@@ -14,6 +14,6 @@ def separarColumnas(archivo):
     df.shape
     lista = []
     for i in range(df.shape[0]):
-        valores = df._get_value(i, "camp;adg;sl;adv")
+        valores = df._get_value(i, "url_landing")
         lista.append(valores.split(";"))
 
