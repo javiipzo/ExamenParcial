@@ -12,8 +12,8 @@ def getvalue(archivo,fila,dato):
 def separarColumnas(archivo):
     df=pd.read_csv(archivo)
     df.shape
-    listaConversiones = []
+    lista = []
     for i in range(df.shape[0]):
         valores = df._get_value(i, "camp;adg;sl;adv")
-        listaConversiones.append(valores.split(";"))
+        lista.append(valores.split(";"))
 
