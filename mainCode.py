@@ -1,8 +1,10 @@
 import pandas as pd
+from pandas.core.frame import DataFrame
 
 def leerdatos(archivo ):
     df=pd.read_csv(archivo)
-    print(df)
+    df
+
 def separarColumnas(archivo):
     df=pd.read_csv(archivo)
     df.shape
