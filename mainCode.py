@@ -5,16 +5,10 @@ def leerdatos(archivo ):
     df=pd.read_csv(archivo)
     df
 
-    
-
-def separarColumnas(archivo):
+def getvalue(archivo,fila,dato):
     df=pd.read_csv(archivo)
-    df.shape
-    lista = []
-    for i in range(df.shape[0]):
-        valores = df.get_value(i, "camp;adg;sl;adv")
-        lista.append(valores.split(";"))
-    print(df)
+    df._get_value(fila,dato)
+
 def separarColumnas(archivo):
     df=pd.read_csv(archivo)
     df.shape
