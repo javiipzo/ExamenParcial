@@ -1,7 +1,7 @@
 import pandas as pd
 from pandas.core.frame import DataFrame
-import urllib
-import urllib3
+import urllib.parse 
+#import urllib3
 #para leer el fichero
 def leerdatos(archivo ):
     df = pd.read_csv(archivo)
@@ -15,11 +15,13 @@ def getvalue(archivo,fila,dato):
 def separarColumnas(archivo):
     df=pd.read_csv(archivo, sep=";")
 
-#obbtener todas las partes de la url, issue2
+#obtener todas las partes de la url, issue2
 def obtenerPartesURL(archivo,columna):
     df=pd.read_csv(archivo, sep=";")
     #primero obtengo la URL
     df.iloc[columna]
-    partes = urllib.parse.split("&")
+    partes = []
+    partes = urllib.parse
+    return partes
 
 obtenerPartesURL("navegacion.csv",5)
