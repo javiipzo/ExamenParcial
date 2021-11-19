@@ -36,4 +36,4 @@ new_df = pd.read_csv('url_landing.csv')
 new_df = pd.loc[:, 'url_landing']
 
 new_df = pd.DataFrame(new_df, columns = ['url_landing','idUser', 'uuid', 'camp', 'adg', 'device', 'sl', 'adv', 'rec'])
-pui
+
