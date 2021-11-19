@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas.core.frame import DataFrame
-import urllib.parse 
+import urllib.parse
 #import urllib3
 #para leer el fichero
 def leerdatos(archivo ):
@@ -36,4 +36,3 @@ new_df = pd.read_csv('url_landing.csv')
 new_df = pd.loc[:, 'url_landing']
 
 new_df = pd.DataFrame(new_df, columns = ['url_landing','idUser', 'uuid', 'camp', 'adg', 'device', 'sl', 'adv', 'rec'])
-pui
