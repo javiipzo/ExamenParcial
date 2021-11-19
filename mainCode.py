@@ -20,5 +20,4 @@ def obtenerPartesURL(archivo):
     #primero obtengo la URL
     DataFrame.iloc["url_landing"]
     partes = urllib.parse.split("&")
-    for parte in partes:
 
