@@ -1,28 +1,18 @@
+import re
 import pandas as pd
 from pandas.core.frame import DataFrame
-import urllib.parse
-#import urllib3
-#para leer el fichero
-def leerdatos(archivo ):
-    df = pd.read_csv(archivo)
-    return df
+import urllib
 
-#Separar todo en columnas
-def separarColumnas(archivo):
-    return pd.read_csv(archivo, sep = ";")
+def leerdatos(archivo):
+    return pd.read_csv(archivo, sep = ';')
 
-#obtener todas las partes de la url, issue2
-def obtenerPartesURL(archivo):
-    navegacion = separarColumnas(archivo)
-    Df = pd.DataFrame(navegacion.loc[:, 'url_landing'])#, columns = ['camp', 'adg', 'device', 'adv', 'sl'])
-    Df.to_csv('url_landing.csv')
-    print(Df)
+def mostrar_datos(archivo):
+    print(archivo)
 
-    new_df = pd.read_csv('url_landing.csv')
-    new_df = pd.loc[:, 'url_landing']
-
-    new_df = pd.DataFrame(new_df, columns = ['url_landing','idUser', 'uuid', 'camp', 'adg', 'device', 'sl', 'adv', 'rec'])
-    return new_df
-
-print(obtenerPartesURL('url_landing.csv'))
-
+navegacion = leerdatos('navegacion.csv')
+conversion = leerdatos('conversiones.csv')
+print(navegacion.head())
+Df = navegacion['url_landing'].str.split('&', expand = True)
+print(Df.head())
+new_df = pd.DataFrame(Df, columns = ['url_landing','idUser', 'uuid', 'camp', 'adg', 'device', 'sl', 'adv', 'rec'])
+print(new_df)
