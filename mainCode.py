@@ -25,3 +25,15 @@ def obtenerPartesURL(archivo,columna):
     print(partes)
 
 obtenerPartesURL("navegacion.csv",5)
+
+navegacion = separarColumnas('navegacion.csv')
+conversion = separarColumnas('conversiones.csv')
+Df = pd.DataFrame(navegacion.loc[:, 'url_landing'])#, columns = ['camp', 'adg', 'device', 'adv', 'sl'])
+Df.to_csv('url_landing.csv') 
+print(Df)
+
+new_df = pd.read_csv('url_landing.csv')
+new_df = pd.loc[:, 'url_landing']
+
+new_df = pd.DataFrame(new_df, columns = ['url_landing','idUser', 'uuid', 'camp', 'adg', 'device', 'sl', 'adv', 'rec'])
+pui
