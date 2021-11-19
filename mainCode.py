@@ -22,4 +22,4 @@ def obtenerPartesURL(archivo,columna):
     df.iloc[columna]
     partes = urllib.parse.split("&")
 
-obtenerPartesURL("navegacion.csv","Column 6")
+obtenerPartesURL("navegacion.csv",5)
