@@ -21,7 +21,7 @@ def obtenerPartesURL(archivo,columna):
     #primero obtengo la URL
     df.iloc[columna]
     partes = []
-    partes = urllib.parse
-    return partes
+    partes.append (df.urllib.parse)
+    print(partes)
 
 obtenerPartesURL("navegacion.csv",5)
