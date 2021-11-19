@@ -1,6 +1,7 @@
 import pandas as pd
 from pandas.core.frame import DataFrame
 import urllib
+import urllib3
 def leerdatos(archivo ):
     df = pd.read_csv(archivo)
     return df
