@@ -1,6 +1,6 @@
 import pandas as pd
 from pandas.core.frame import DataFrame
-import urllib.parse 
+import urllib.parse
 #import urllib3
 #para leer el fichero
 def leerdatos(archivo ):
@@ -9,7 +9,7 @@ def leerdatos(archivo ):
 
 #Separar todo en columnas
 def separarColumnas(archivo):
-    df=pd.read_csv(archivo, sep=";")
+    return pd.read_csv(archivo, sep=";")
 
 #obtener todas las partes de la url, issue2
 def obtenerPartesURL(archivo):
