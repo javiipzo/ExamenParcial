@@ -1,5 +1,5 @@
 import re
-from numpy.core.numeric import NaN
+import numpy as np
 import pandas as pd
 from pandas.core.frame import DataFrame
 import urllib
