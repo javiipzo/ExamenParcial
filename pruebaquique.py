@@ -1,5 +1,6 @@
 import re
 import numpy as np
+from numpy.core.numeric import NaN
 import pandas as pd
 from pandas.core.frame import DataFrame
 import urllib
@@ -35,7 +36,6 @@ for i in range(0, len(modelo)):
 
 modelo.columns = ['Modelo', 'gclid']
 print(modelo.head())
-print(modelo.tail())
 print(len(modelo))
 
 # Eliminamos la columna URL_landing modificados
